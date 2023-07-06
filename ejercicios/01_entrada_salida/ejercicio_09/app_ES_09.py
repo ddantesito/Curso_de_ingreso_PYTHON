@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Dante
+apellido: Diaz
 ---
 Ejercicio: entrada_salida_09
 ---
@@ -40,8 +40,39 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+
+        sueldo = int((self.txt_sueldo.get()))
+        incremento = int(self.txt_incremento.get())
+
+        aumento = sueldo * incremento / 100
+
+        sueldo_final = aumento + sueldo 
+
+        alert(title="Sueldo actualizado", message= f"Su sueldo es {sueldo_final}")
+       
+       
+        # precio = 1000
         
+        # 1.10 EL 1 REPRESENTA EL 100% Y EL 10 EL AUMENTO
+
+        # regla de 3 corta
+        # porcentaje = precio * 0.10
+        
+        # expresion larga
+        # aumento = precio * 10 / 100
+
+        
+        # precio_final = precio + aumento
+
+        # forma corta si quiero solo el precio final, regla de 3 mas aumento
+        # precio_final = precio * 1.10
+        
+        # precio con descuento forma RAPIDA
+        # precio_final = precio * 0.90
+
+       
+        
+
     
 if __name__ == "__main__":
     app = App()
